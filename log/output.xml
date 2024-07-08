@@ -1,160 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.11.9 on win32)" generated="2024-07-08T15:49:17.448451" rpa="false" schemaversion="5">
-<suite id="s1" name="Reprovar" source="C:\elrison-teste-kodigos\apps\teste_kodigos_scm\tests\reprovar.robot">
-<test id="s1-t1" name="Reprovar sem motivo" line="10">
+<robot generator="Robot 7.0.1 (Python 3.11.9 on win32)" generated="2024-07-08T16:28:08.089976" rpa="false" schemaversion="5">
+<suite id="s1" name="Adicionar Solicitacao" source="C:\elrison-teste-kodigos\apps\teste_kodigos_scm\tests\adicionar_solicitacao.robot">
+<test id="s1-t1" name="Adicionar uma nova solicitação de compras." line="10">
 <kw name="Start Browser" owner="base" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2024-07-08T15:49:18.852765" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\elrison-teste-kodigos\\apps\\teste_kodigos_scm\\log\\browser\\traces\\2f9149b6-1dbc-4339-93ab-9c1cea5e5dd9"}</msg>
-<msg time="2024-07-08T15:49:19.321829" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\elrison-teste-kodigos\\apps\\teste_kodigos_scm\\log\\browser\\traces\\2f9149b6-1dbc-4339-93ab-9c1cea5e5dd9"}</msg>
+<msg time="2024-07-08T16:28:08.911850" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\elrison-teste-kodigos\\apps\\teste_kodigos_scm\\log\\browser\\traces\\c94be56b-08eb-4e95-9a0b-c067ebcb85d1"}</msg>
+<msg time="2024-07-08T16:28:09.106595" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\elrison-teste-kodigos\\apps\\teste_kodigos_scm\\log\\browser\\traces\\c94be56b-08eb-4e95-9a0b-c067ebcb85d1"}</msg>
 <arg>browser=${BROWSER}</arg>
 <arg>headless=${IS_HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-07-08T15:49:18.852765" elapsed="0.469064"/>
+<status status="PASS" start="2024-07-08T16:28:08.910742" elapsed="0.195853"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2024-07-08T15:49:20.493111" level="INFO">Successfully initialized new page object and opened url: https://app.kodigos.com.br:63995/scm/front/</msg>
-<msg time="2024-07-08T15:49:20.493111" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2024-07-08T16:28:11.661869" level="INFO">Successfully initialized new page object and opened url: https://app.kodigos.com.br:63995/scm/front/</msg>
+<msg time="2024-07-08T16:28:11.661869" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${BASE_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2024-07-08T15:49:19.321829" elapsed="1.171282"/>
+<status status="PASS" start="2024-07-08T16:28:09.106595" elapsed="2.555274"/>
 </kw>
-<status status="PASS" start="2024-07-08T15:49:18.852765" elapsed="1.640346"/>
+<status status="PASS" start="2024-07-08T16:28:08.910742" elapsed="2.751127"/>
 </kw>
-<kw name=" Escolher a primeira aprovação disponível." owner="reprovar">
+<kw name="Preencher a Filial-Kodigos." owner="adicionarsolicitacao">
 <kw name="Click" owner="Browser">
-<msg time="2024-07-08T15:49:20.493111" level="INFO">Clicks the element '//a[contains(.,'assignment_turned_inAprovar Solicitações')]'.</msg>
-<arg>${REPROVAR.btn_reprovar}</arg>
+<msg time="2024-07-08T16:28:11.661869" level="INFO">Clicks the element '//a[contains(.,'descriptionSolicitação')]'.</msg>
+<arg>${SOLICITACAO.btn_Solicitacoes}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:20.493111" elapsed="0.402901"/>
+<status status="PASS" start="2024-07-08T16:28:11.661869" elapsed="0.392781"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:12.055688" level="INFO">Clicks the element '//span[contains(.,'description')]'.</msg>
+<arg>${SOLICITACAO.btn_new_solicitacoes}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:12.054650" elapsed="2.911614"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:14.967292" level="INFO">Clicks the element '//div[@class='q-field__control-container col relative-position row no-wrap q-anchor--skip'][contains(.,'Filial')]'.</msg>
+<arg>${SOLICITACAO.seta}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:14.966264" elapsed="1.157601"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:16.124920" level="INFO">Clicks the element '//span[contains(.,'01/01 - Instituto Kodigos')]'.</msg>
+<arg>${SOLICITACAO.filial_kodigos}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:16.123865" elapsed="0.160263"/>
+</kw>
+<status status="PASS" start="2024-07-08T16:28:11.661869" elapsed="4.622259"/>
+</kw>
+<kw name="Preencher o centro de custo -Compras." owner="adicionarsolicitacao">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:16.284128" level="INFO">Clicks the element '//input[@aria-label='Centro de Custo']'.</msg>
+<arg>${SOLICITACAO.centro_custo}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:16.284128" elapsed="0.048968"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:16.333096" level="INFO">Clicks the element '(//div[contains(@class,'section--main justify-center')])[9]'.</msg>
+<arg>${SOLICITACAO.compras_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:16.333096" elapsed="0.104324"/>
+</kw>
+<status status="PASS" start="2024-07-08T16:28:16.284128" elapsed="0.153292"/>
+</kw>
+<kw name="Definir uma descrição." owner="adicionarsolicitacao">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:16.437420" level="INFO">Clicks the element '(//div[@class='q-field__native row items-center'])[4]'.</msg>
+<arg>${SOLICITACAO.set_descricao}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:16.437420" elapsed="0.294767"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:16.732187" level="INFO">Clicks the element '//div[@class='q-item__section column q-item__section--main justify-center'][contains(.,'SOLICITAÇÃO DE COMPRA - PEÇAS DE REPOSIÇÃO DE MÁQUINAS E EQUIPAMENTOS')]'.</msg>
+<arg>${SOLICITACAO.descrica02}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:16.732187" elapsed="0.113213"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:16.845400" level="INFO">Clicks the element '//textarea[@aria-label='Justificativa/Projeto']'.</msg>
+<arg>${SOLICITACAO.justificativa}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:16.845400" elapsed="0.300239"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-08T16:28:17.145639" level="INFO">Fills the text 'Produto a ser inserido para avaliação e produção!' in the given field.</msg>
+<arg>${SOLICITACAO.justificativa}</arg>
+<arg>Produto a ser inserido para avaliação e produção!</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:17.145639" elapsed="0.032598"/>
+</kw>
+<status status="PASS" start="2024-07-08T16:28:16.437420" elapsed="0.740817"/>
+</kw>
+<kw name="Adicionar um produto genérico." owner="adicionarsolicitacao">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-08T16:28:17.178237" level="INFO">Fills the text '5' in the given field.</msg>
+<arg>${SOLICITACAO.qtd}</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:17.178237" elapsed="0.026170"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:17.204407" level="INFO">Clicks the element '//input[@aria-label='UM']'.</msg>
+<arg>${SOLICITACAO.um}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:17.204407" elapsed="0.069959"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:17.275385" level="INFO">Clicks the element '//div[@class='q-item__label'][contains(.,'PL - POLEGADAS')]'.</msg>
+<arg>${SOLICITACAO.polegadas}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:17.274366" elapsed="0.129733"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-08T16:28:17.410416" level="INFO">Fills the text 'Produto Generico para inserção de dados.' in the given field.</msg>
+<arg>${SOLICITACAO.descricao_generico}</arg>
+<arg>Produto Generico para inserção de dados.</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:17.404099" elapsed="0.024645"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T16:28:17.428744" level="INFO">Clicks the element '//button[contains(.,'Adicionar')]'.</msg>
+<arg>${SOLICITACAO.btn_add}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T16:28:17.428744" elapsed="0.084852"/>
+</kw>
+<status status="PASS" start="2024-07-08T16:28:17.178237" elapsed="0.335359"/>
+</kw>
+<kw name="Salvar e validar se na listagem, o último item possui a data de hoje e a descrição definida." owner="adicionarsolicitacao">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-07-08T16:28:17.513596" level="INFO">${data_atual} = 08/07/2024</msg>
+<var>${data_atual}</var>
+<arg>result_format=%d/%m/%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-07-08T16:28:17.513596" elapsed="0.000000"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2024-07-08T15:49:22.246436" level="INFO">Waited for Element with selector (//td[@class='q-td text-center'])[2] at state visible</msg>
-<arg>${REPROVAR.ap_01}</arg>
-<arg>visible</arg>
-<arg>timeout=2 s</arg>
+<msg time="2024-07-08T16:28:17.513596" level="INFO">Waited for Element with selector xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='08/07/2024'] at state visible</msg>
+<arg>xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='${data_atual}']</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2024-07-08T15:49:20.896012" elapsed="1.350424"/>
+<status status="PASS" start="2024-07-08T16:28:17.513596" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-07-08T15:49:20.493111" elapsed="1.753325"/>
-</kw>
-<kw name="Validar se apareceu o modal “Visualização”." owner="reprovar">
-<kw name="Click" owner="Browser">
-<msg time="2024-07-08T15:49:22.248435" level="INFO">Clicks the element '(//button[contains(.,'visibility')])[1]'.</msg>
-<arg>${REPROVAR.visibility}</arg>
+<kw name="Get Element" owner="Browser">
+<msg time="2024-07-08T16:28:17.528658" level="INFO">Locator found successfully.</msg>
+<msg time="2024-07-08T16:28:17.528658" level="INFO">${texto_do_elemento} = xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='08/07/2024']</msg>
+<var>${texto_do_elemento}</var>
+<arg>xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='${data_atual}']</arg>
+<tag>Getter</tag>
 <tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:22.247434" elapsed="0.100883"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2024-07-08T15:49:22.348317" level="INFO">Clicks the element '//h6[contains(.,'Visualização')]'.</msg>
-<arg>${REPROVAR.modal_visibity}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:22.348317" elapsed="0.395125"/>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2024-07-08T16:28:17.513596" elapsed="0.015062"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2024-07-08T15:49:22.775519" level="INFO">Text: 'Visualização'</msg>
-<arg>//h6[contains(text(),'Visualização')]</arg>
+<msg time="2024-07-08T16:28:17.581989" level="INFO">Text: 'Produto Generico para inserção de dados.'</msg>
+<arg>${SOLICITACAO.validar_descicao}</arg>
 <arg>==</arg>
-<arg>Visualização</arg>
+<arg>Produto Generico para inserção de dados.</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:22.743442" elapsed="0.032077"/>
+<status status="PASS" start="2024-07-08T16:28:17.528658" elapsed="0.053331"/>
 </kw>
-<status status="PASS" start="2024-07-08T15:49:22.247434" elapsed="0.528085"/>
-</kw>
-<kw name="Apertar reprovar." owner="reprovar">
 <kw name="Click" owner="Browser">
-<msg time="2024-07-08T15:49:22.775519" level="INFO">Clicks the element '//button[contains(.,'REPROVAR')]'.</msg>
-<arg>${REPROVAR.btn_reprovar2}</arg>
+<msg time="2024-07-08T16:28:17.583092" level="INFO">Clicks the element '//button[contains(.,'SALVAR')]'.</msg>
+<arg>${SOLICITACAO.btn_salvar}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:22.775519" elapsed="0.053836"/>
+<status status="PASS" start="2024-07-08T16:28:17.581989" elapsed="0.046912"/>
 </kw>
-<status status="PASS" start="2024-07-08T15:49:22.775519" elapsed="0.053836"/>
-</kw>
-<kw name="Validar se apareceu o modal “Confirmação”." owner="reprovar">
-<kw name="Click" owner="Browser">
-<msg time="2024-07-08T15:49:22.829355" level="INFO">Clicks the element '//div[@class='q-card__section q-card__section--vert'][contains(.,'Confirmação')]'.</msg>
-<arg>${REPROVAR.modal_confirmacao}</arg>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-07-08T16:28:17.821803" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
 <tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:22.829355" elapsed="0.340059"/>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-07-08T16:28:17.628901" elapsed="0.192902"/>
 </kw>
-<kw name="Get Text" owner="Browser">
-<msg time="2024-07-08T15:49:23.176381" level="INFO">Text: 'Confirmação'</msg>
-<arg>${REPROVAR.modal_confirmacao}</arg>
-<arg>==</arg>
-<arg>Confirmação</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:23.169414" elapsed="0.006967"/>
-</kw>
-<status status="PASS" start="2024-07-08T15:49:22.829355" elapsed="0.347026"/>
-</kw>
-<kw name="Apertar “sim”, sem digitar nenhum motivo." owner="reprovar">
-<kw name="Click" owner="Browser">
-<msg time="2024-07-08T15:49:23.192365" level="INFO">Clicks the element '//button[contains(.,'Sim')]'.</msg>
-<arg>${REPROVAR.btn_sim}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:23.191395" elapsed="0.049766"/>
-</kw>
-<status status="PASS" start="2024-07-08T15:49:23.191395" elapsed="0.049766"/>
-</kw>
-<kw name="Validar se apareceu o snackbarcom o texto “O motivo não pode ser vazio”." owner="reprovar">
-<kw name="Click" owner="Browser">
-<msg time="2024-07-08T15:49:23.244206" level="INFO">Clicks the element '//div[@class='q-notification__message col'][contains(.,'O motivo não pode ser vazio')]'.</msg>
-<arg>${REPROVAR.alert}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:23.243212" elapsed="1.473745"/>
-</kw>
-<kw name="Get Text" owner="Browser">
-<msg time="2024-07-08T15:49:24.725995" level="INFO">Text: 'O motivo não pode ser vazio'</msg>
-<arg>${REPROVAR.alert}</arg>
-<arg>==</arg>
-<arg>O motivo não pode ser vazio</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2024-07-08T15:49:24.716957" elapsed="0.009038"/>
-</kw>
-<status status="PASS" start="2024-07-08T15:49:23.243212" elapsed="1.482783"/>
+<status status="PASS" start="2024-07-08T16:28:17.513596" elapsed="0.308207"/>
 </kw>
 <kw name="Finish Browser" owner="base" type="TEARDOWN">
 <kw name="Take Screenshot" owner="Browser">
-<msg time="2024-07-08T15:49:24.943108" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-08T16:28:17.939024" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
 <arg>fullPage=true</arg>
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2024-07-08T15:49:24.725995" elapsed="0.217113"/>
+<status status="PASS" start="2024-07-08T16:28:17.821803" elapsed="0.117221"/>
 </kw>
-<status status="PASS" start="2024-07-08T15:49:24.725995" elapsed="0.217113"/>
+<status status="PASS" start="2024-07-08T16:28:17.821803" elapsed="0.117221"/>
 </kw>
-<status status="PASS" start="2024-07-08T15:49:18.852765" elapsed="6.091333"/>
+<status status="PASS" start="2024-07-08T16:28:08.894273" elapsed="9.044751"/>
 </test>
-<doc>Suíte de testes de Reprovação sem motivo</doc>
-<status status="PASS" start="2024-07-08T15:49:17.448451" elapsed="7.594556"/>
+<doc>Suíte de testes de inserção de solicitação de compras</doc>
+<status status="PASS" start="2024-07-08T16:28:08.089976" elapsed="9.946051"/>
 </suite>
 <statistics>
 <total>
@@ -163,7 +234,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Reprovar">Reprovar</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Adicionar Solicitacao">Adicionar Solicitacao</stat>
 </suite>
 </statistics>
 <errors>

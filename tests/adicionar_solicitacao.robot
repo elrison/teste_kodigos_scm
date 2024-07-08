@@ -13,5 +13,6 @@ Adicionar uma nova solicitação de compras.
    Definir uma descrição.
    Adicionar um produto genérico.
    Salvar e validar se na listagem, o último item possui a data de hoje e a descrição definida.
-   
+
+
    
