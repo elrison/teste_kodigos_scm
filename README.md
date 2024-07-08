@@ -24,7 +24,9 @@ Acesse o endereço   https://robotframework-browser.org/
 # Instalar o Browser com os seguintes comandos
 Usando pip:
 > pip install robotframework-browser
+
 Inicializando o Browser:
+
 > rfbrowser init
 
 # Instalar o Robotframework-Selenium
