@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.9 on win32)" generated="2024-07-08T15:49:17.448451" rpa="false" schemaversion="5">
+<suite id="s1" name="Reprovar" source="C:\elrison-teste-kodigos\apps\teste_kodigos_scm\tests\reprovar.robot">
+<test id="s1-t1" name="Reprovar sem motivo" line="10">
+<kw name="Start Browser" owner="base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-07-08T15:49:18.852765" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\elrison-teste-kodigos\\apps\\teste_kodigos_scm\\log\\browser\\traces\\2f9149b6-1dbc-4339-93ab-9c1cea5e5dd9"}</msg>
+<msg time="2024-07-08T15:49:19.321829" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\elrison-teste-kodigos\\apps\\teste_kodigos_scm\\log\\browser\\traces\\2f9149b6-1dbc-4339-93ab-9c1cea5e5dd9"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${IS_HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-07-08T15:49:18.852765" elapsed="0.469064"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-07-08T15:49:20.493111" level="INFO">Successfully initialized new page object and opened url: https://app.kodigos.com.br:63995/scm/front/</msg>
+<msg time="2024-07-08T15:49:20.493111" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-07-08T15:49:19.321829" elapsed="1.171282"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:18.852765" elapsed="1.640346"/>
+</kw>
+<kw name=" Escolher a primeira aprovação disponível." owner="reprovar">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T15:49:20.493111" level="INFO">Clicks the element '//a[contains(.,'assignment_turned_inAprovar Solicitações')]'.</msg>
+<arg>${REPROVAR.btn_reprovar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:20.493111" elapsed="0.402901"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-07-08T15:49:22.246436" level="INFO">Waited for Element with selector (//td[@class='q-td text-center'])[2] at state visible</msg>
+<arg>${REPROVAR.ap_01}</arg>
+<arg>visible</arg>
+<arg>timeout=2 s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-07-08T15:49:20.896012" elapsed="1.350424"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:20.493111" elapsed="1.753325"/>
+</kw>
+<kw name="Validar se apareceu o modal “Visualização”." owner="reprovar">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T15:49:22.248435" level="INFO">Clicks the element '(//button[contains(.,'visibility')])[1]'.</msg>
+<arg>${REPROVAR.visibility}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:22.247434" elapsed="0.100883"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T15:49:22.348317" level="INFO">Clicks the element '//h6[contains(.,'Visualização')]'.</msg>
+<arg>${REPROVAR.modal_visibity}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:22.348317" elapsed="0.395125"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-07-08T15:49:22.775519" level="INFO">Text: 'Visualização'</msg>
+<arg>//h6[contains(text(),'Visualização')]</arg>
+<arg>==</arg>
+<arg>Visualização</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:22.743442" elapsed="0.032077"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:22.247434" elapsed="0.528085"/>
+</kw>
+<kw name="Apertar reprovar." owner="reprovar">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T15:49:22.775519" level="INFO">Clicks the element '//button[contains(.,'REPROVAR')]'.</msg>
+<arg>${REPROVAR.btn_reprovar2}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:22.775519" elapsed="0.053836"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:22.775519" elapsed="0.053836"/>
+</kw>
+<kw name="Validar se apareceu o modal “Confirmação”." owner="reprovar">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T15:49:22.829355" level="INFO">Clicks the element '//div[@class='q-card__section q-card__section--vert'][contains(.,'Confirmação')]'.</msg>
+<arg>${REPROVAR.modal_confirmacao}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:22.829355" elapsed="0.340059"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-07-08T15:49:23.176381" level="INFO">Text: 'Confirmação'</msg>
+<arg>${REPROVAR.modal_confirmacao}</arg>
+<arg>==</arg>
+<arg>Confirmação</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:23.169414" elapsed="0.006967"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:22.829355" elapsed="0.347026"/>
+</kw>
+<kw name="Apertar “sim”, sem digitar nenhum motivo." owner="reprovar">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T15:49:23.192365" level="INFO">Clicks the element '//button[contains(.,'Sim')]'.</msg>
+<arg>${REPROVAR.btn_sim}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:23.191395" elapsed="0.049766"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:23.191395" elapsed="0.049766"/>
+</kw>
+<kw name="Validar se apareceu o snackbarcom o texto “O motivo não pode ser vazio”." owner="reprovar">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T15:49:23.244206" level="INFO">Clicks the element '//div[@class='q-notification__message col'][contains(.,'O motivo não pode ser vazio')]'.</msg>
+<arg>${REPROVAR.alert}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:23.243212" elapsed="1.473745"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-07-08T15:49:24.725995" level="INFO">Text: 'O motivo não pode ser vazio'</msg>
+<arg>${REPROVAR.alert}</arg>
+<arg>==</arg>
+<arg>O motivo não pode ser vazio</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T15:49:24.716957" elapsed="0.009038"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:23.243212" elapsed="1.482783"/>
+</kw>
+<kw name="Finish Browser" owner="base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-07-08T15:49:24.943108" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>fullPage=true</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-07-08T15:49:24.725995" elapsed="0.217113"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:24.725995" elapsed="0.217113"/>
+</kw>
+<status status="PASS" start="2024-07-08T15:49:18.852765" elapsed="6.091333"/>
+</test>
+<doc>Suíte de testes de Reprovação sem motivo</doc>
+<status status="PASS" start="2024-07-08T15:49:17.448451" elapsed="7.594556"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Reprovar">Reprovar</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

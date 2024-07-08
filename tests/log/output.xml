@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.9 on win32)" generated="2024-07-08T10:14:55.833280" rpa="false" schemaversion="5">
+<suite id="s1" name="Adicionar Solicitacao" source="C:\elrison-teste-kodigos\apps\tests\adicionar_solicitacao.robot">
+<test id="s1-t1" name="Adicionar uma nova solicitação de compras." line="10">
+<kw name="Start Browser" owner="base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-07-08T10:14:57.941348" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\elrison-teste-kodigos\\apps\\tests\\log\\browser\\traces\\8580eb6e-dfaf-417c-bb3a-0edca0f2506f"}</msg>
+<msg time="2024-07-08T10:14:58.910556" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\elrison-teste-kodigos\\apps\\tests\\log\\browser\\traces\\8580eb6e-dfaf-417c-bb3a-0edca0f2506f"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${IS_HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-07-08T10:14:57.941348" elapsed="0.969208"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-07-08T10:15:00.074977" level="INFO">Successfully initialized new page object and opened url: https://app.kodigos.com.br:63995/scm/front/</msg>
+<msg time="2024-07-08T10:15:00.074977" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-07-08T10:14:58.910556" elapsed="1.164421"/>
+</kw>
+<status status="PASS" start="2024-07-08T10:14:57.937341" elapsed="2.137636"/>
+</kw>
+<kw name="Preencher a Filial-Kodigos." owner="adicionarsolicitacao">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:00.089111" level="INFO">Clicks the element '//a[contains(.,'descriptionSolicitação')]'.</msg>
+<arg>${SOLICITACAO.btn_Solicitacoes}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:00.074977" elapsed="0.508629"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:00.583606" level="INFO">Clicks the element '//span[contains(.,'description')]'.</msg>
+<arg>${SOLICITACAO.btn_new_solicitacoes}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:00.583606" elapsed="0.363302"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:00.946908" level="INFO">Clicks the element '//div[@class='q-field__control-container col relative-position row no-wrap q-anchor--skip'][contains(.,'Filial')]'.</msg>
+<arg>${SOLICITACAO.seta}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:00.946908" elapsed="1.304321"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:02.251229" level="INFO">Clicks the element '//span[contains(.,'01/01 - Instituto Kodigos')]'.</msg>
+<arg>${SOLICITACAO.filial_kodigos}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:02.251229" elapsed="0.131994"/>
+</kw>
+<status status="PASS" start="2024-07-08T10:15:00.074977" elapsed="2.308246"/>
+</kw>
+<kw name="Preencher o centro de custo -Compras." owner="adicionarsolicitacao">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:02.383223" level="INFO">Clicks the element '//input[@aria-label='Centro de Custo']'.</msg>
+<arg>${SOLICITACAO.centro_custo}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:02.383223" elapsed="0.086273"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:02.469496" level="INFO">Clicks the element '(//div[contains(@class,'section--main justify-center')])[9]'.</msg>
+<arg>${SOLICITACAO.compras_id}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:02.469496" elapsed="0.108074"/>
+</kw>
+<status status="PASS" start="2024-07-08T10:15:02.383223" elapsed="0.194347"/>
+</kw>
+<kw name="Definir uma descrição." owner="adicionarsolicitacao">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:02.577570" level="INFO">Clicks the element '(//div[@class='q-field__native row items-center'])[4]'.</msg>
+<arg>${SOLICITACAO.set_descricao}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:02.577570" elapsed="0.330009"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:02.907579" level="INFO">Clicks the element '//div[@class='q-item__section column q-item__section--main justify-center'][contains(.,'SOLICITAÇÃO DE COMPRA - PEÇAS DE REPOSIÇÃO DE MÁQUINAS E EQUIPAMENTOS')]'.</msg>
+<arg>${SOLICITACAO.descrica02}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:02.907579" elapsed="0.174523"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:03.082102" level="INFO">Clicks the element '//textarea[@aria-label='Justificativa/Projeto']'.</msg>
+<arg>${SOLICITACAO.justificativa}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.082102" elapsed="0.315883"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-08T10:15:03.397985" level="INFO">Fills the text 'Produto a ser inserido para avaliação e produção!' in the given field.</msg>
+<arg>${SOLICITACAO.justificativa}</arg>
+<arg>Produto a ser inserido para avaliação e produção!</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.397985" elapsed="0.022313"/>
+</kw>
+<status status="PASS" start="2024-07-08T10:15:02.577570" elapsed="0.842728"/>
+</kw>
+<kw name="Adicionar um produto genérico." owner="adicionarsolicitacao">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-08T10:15:03.424917" level="INFO">Fills the text '5' in the given field.</msg>
+<arg>${SOLICITACAO.qtd}</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.423173" elapsed="0.190855"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:03.614028" level="INFO">Clicks the element '//input[@aria-label='UM']'.</msg>
+<arg>${SOLICITACAO.um}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.614028" elapsed="0.079174"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:03.693202" level="INFO">Clicks the element '//div[@class='q-item__label'][contains(.,'PL - POLEGADAS')]'.</msg>
+<arg>${SOLICITACAO.polegadas}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.693202" elapsed="0.122925"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-07-08T10:15:03.816127" level="INFO">Fills the text 'Produto Generico para inserção de dados.' in the given field.</msg>
+<arg>${SOLICITACAO.descricao_generico}</arg>
+<arg>Produto Generico para inserção de dados.</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.816127" elapsed="0.033356"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:03.849483" level="INFO">Clicks the element '//button[contains(.,'Adicionar')]'.</msg>
+<arg>${SOLICITACAO.btn_add}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.849483" elapsed="0.080340"/>
+</kw>
+<status status="PASS" start="2024-07-08T10:15:03.423173" elapsed="0.506650"/>
+</kw>
+<kw name="Salvar e validar se na listagem, o último item possui a data de hoje e a descrição definida." owner="adicionarsolicitacao">
+<kw name="Click" owner="Browser">
+<msg time="2024-07-08T10:15:03.929823" level="INFO">Clicks the element '//button[contains(.,'SALVAR')]'.</msg>
+<arg>${SOLICITACAO.btn_salvar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.929823" elapsed="0.065895"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-07-08T10:15:03.995718" level="INFO">${data_atual} = 08/07/2024</msg>
+<var>${data_atual}</var>
+<arg>result_format=%d/%m/%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.995718" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-07-08T10:15:04.010295" level="INFO">Waited for Element with selector xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='08/07/2024'] at state visible</msg>
+<arg>xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='${data_atual}']</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-07-08T10:15:03.995718" elapsed="0.014577"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-07-08T10:15:04.063340" level="INFO">Text: '08/07/2024'</msg>
+<msg time="2024-07-08T10:15:04.063340" level="INFO">${texto_do_elemento} = 08/07/2024</msg>
+<var>${texto_do_elemento}</var>
+<arg>xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='${data_atual}']</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-07-08T10:15:04.010295" elapsed="0.053045"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-07-08T10:15:14.456940" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-08T10:15:14.456940" level="INFO">See also file:///C:/elrison-teste-kodigos/apps/tests/log/playwright-log.txt for additional details.</msg>
+<msg time="2024-07-08T10:15:14.456940" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  [2m- waiting for locator('//td[contains(.,\'Produto para a realização de testes de inspeção\')]') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
+<arg>${SOLICITACAO.descricao_definida}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2024-07-08T10:15:04.063340" elapsed="10.490046">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  [2m- waiting for locator('//td[contains(.,\'Produto para a realização de testes de inspeção\')]') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${SOLICITACAO.descricao_definida}</arg>
+<arg>Produto para a realização de testes de inspeção</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-07-08T10:15:14.553386" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2024-07-08T10:15:14.553386" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-08T10:15:03.929823" elapsed="10.623563">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  [2m- waiting for locator('//td[contains(.,\'Produto para a realização de testes de inspeção\')]') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</kw>
+<kw name="Finish Browser" owner="base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-07-08T10:15:14.695326" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<arg>fullPage=true</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-07-08T10:15:14.553386" elapsed="0.141940"/>
+</kw>
+<status status="PASS" start="2024-07-08T10:15:14.553386" elapsed="0.141940"/>
+</kw>
+<status status="FAIL" start="2024-07-08T10:14:57.937341" elapsed="16.806645">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  [2m- waiting for locator('//td[contains(.,\'Produto para a realização de testes de inspeção\')]') to be visible[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+</test>
+<doc>Suíte de testes de inserção de solicitação de compras</doc>
+<status status="FAIL" start="2024-07-08T10:14:55.833280" elapsed="19.062379"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Adicionar Solicitacao">Adicionar Solicitacao</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
