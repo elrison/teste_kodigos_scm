@@ -61,9 +61,6 @@ Salvar e validar se na listagem, o último item possui a data de hoje e a descri
     Wait For Elements State     xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='${data_atual}']
 
     ${texto_do_elemento}    Get Element    xpath=//td[contains(@class, 'q-td') and contains(@class, 'text-center') and text()='${data_atual}']
-    
-
-    ################################################################################
    
     Browser.Get Text  ${SOLICITACAO.validar_descicao}   ==  Produto Generico para inserção de dados.
 
