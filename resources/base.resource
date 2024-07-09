@@ -20,6 +20,7 @@ ${IS_HEADLESS}      False
 Start Browser
     New Browser    browser=${BROWSER}    headless=${IS_HEADLESS}
     New Page       ${BASE_URL}
+    [Setup]  Set Browser Timeout  30000
 
 Finish Browser
     Take Screenshot    fullPage=true
